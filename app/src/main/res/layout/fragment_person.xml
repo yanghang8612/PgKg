@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bright_gray">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_header"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/default_header_image"
+            app:civ_border_color="@color/gray"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="张三"
+            android:theme="@style/AppTheme.BigText"
+            app:layout_constraintBottom_toBottomOf="@+id/civ_header"
+            app:layout_constraintStart_toEndOf="@+id/civ_header" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.PersonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_reader_settings"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/selector_action"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_reader_settings_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_reader_setttings" />
+
+            <TextView
+                android:id="@+id/tv_reader_settings_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="读写器配置"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_reader_settings_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_reader_settings_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_reader_settings_icon" />
+
+            <ImageView
+                android:id="@+id/iv_reader_settings_arrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_reader_settings_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_reader_settings_icon"
+                app:srcCompat="@drawable/ic_action_next" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="64dp"
+            android:background="@color/bright_gray"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_reader_settings" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_modify_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_action"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_divider_1">
+
+            <ImageView
+                android:id="@+id/iv_modify_username_icon"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_user" />
+
+            <TextView
+                android:id="@+id/tv_modify_username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="修改用户名"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_modify_username_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_modify_username_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_modify_username_icon" />
+
+            <ImageView
+                android:id="@+id/iv_modify_username_arrow"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_modify_username_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_modify_username_icon"
+                app:srcCompat="@drawable/ic_action_next" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider_2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="64dp"
+            android:background="@color/bright_gray"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_modify_username" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_modify_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_action"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_divider_2">
+
+            <ImageView
+                android:id="@+id/iv_modify_password_icon"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_password" />
+
+            <TextView
+                android:id="@+id/tv_modify_password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="修改密码"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_modify_password_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_modify_password_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_modify_password_icon" />
+
+            <ImageView
+                android:id="@+id/iv_modify_password_arrow"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_modify_password_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_modify_password_icon"
+                app:srcCompat="@drawable/ic_action_next" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider_3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="64dp"
+            android:background="@color/bright_gray"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_modify_password" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_exit_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_action"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_divider_3">
+
+            <ImageView
+                android:id="@+id/iv_exit_app_icon"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_action_exit" />
+
+            <TextView
+                android:id="@+id/tv_exit_app_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="退出登录"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_exit_app_icon"
+                app:layout_constraintStart_toEndOf="@+id/iv_exit_app_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_exit_app_icon" />
+
+            <ImageView
+                android:id="@+id/iv_exit_app_arrow"
+                android:layout_width="@dimen/fragment_person_icon_size"
+                android:layout_height="@dimen/fragment_person_icon_size"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_exit_app_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_exit_app_icon"
+                app:srcCompat="@drawable/ic_action_next" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

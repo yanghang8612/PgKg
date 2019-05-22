@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme.CommonText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.SettingActivity">
+
+    <ImageButton
+        android:id="@+id/ibtn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_close" />
+
+    <TextView
+        android:id="@+id/tv_setting_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="设备参数修改"
+        android:theme="@style/AppTheme.BigText"
+        app:layout_constraintBottom_toBottomOf="@+id/ibtn_close"
+        app:layout_constraintStart_toEndOf="@+id/ibtn_close"
+        app:layout_constraintTop_toTopOf="@+id/ibtn_close" />
+
+    <TextView
+        android:id="@+id/tv_device_addr_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="设备云地址"
+        app:layout_constraintBottom_toBottomOf="@+id/et_device_addr"
+        app:layout_constraintStart_toStartOf="@+id/et_device_addr"
+        app:layout_constraintTop_toTopOf="@+id/et_device_addr" />
+
+    <TextView
+        android:id="@+id/tv_reader_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="读写器ID"
+        app:layout_constraintBottom_toBottomOf="@+id/et_reader_id"
+        app:layout_constraintStart_toStartOf="@+id/et_reader_id"
+        app:layout_constraintTop_toTopOf="@+id/et_reader_id" />
+
+    <EditText
+        android:id="@+id/et_device_addr"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/activity_setting_edit_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="URL地址"
+        android:inputType="textUri"
+        android:paddingStart="@dimen/activity_setting_label_padding"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibtn_close" />
+
+    <Button
+        android:id="@+id/btn_save_setting"
+        style="@style/ButtonPrimary"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/activity_setting_edit_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="保存"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_reader_id" />
+
+    <EditText
+        android:id="@+id/et_reader_id"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingStart="@dimen/activity_setting_label_padding"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_device_addr"
+        app:layout_constraintStart_toStartOf="@+id/et_device_addr"
+        app:layout_constraintTop_toBottomOf="@+id/et_device_addr" />
+
+</android.support.constraint.ConstraintLayout>

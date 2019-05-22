@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">品管库管软件</string>
+    <string name="title_stack">拆拼垛</string>
+    <string name="title_delivery">非正常出库</string>
+    <string name="title_quality">品质管理</string>
+    <string name="title_person">个人</string>
+
+    <string name="reader_status_label">读写器状态</string>
+    <string name="platform_status_label">平台状态</string>
+
+    <string name="dialog_title">提示</string>
+</resources>
